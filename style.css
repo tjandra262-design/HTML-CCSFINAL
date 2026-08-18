@@ -1,0 +1,491 @@
+/* ============================================
+   PT Surya Satu Bersama — design tokens
+   ============================================ */
+:root {
+  --ink: #1A1310;
+  --ink-soft: #241B16;
+  --paper: #FBF9F6;
+  --paper-raise: #FFFFFF;
+  --paper-dim: #F3EEE7;
+  --red: #B91C1C;
+  --red-deep: #8F1414;
+  --gold: #B8862E;
+  --gold-light: #D9AE5F;
+  --slate: #6B5F56;
+  --slate-light: #9C8F84;
+  --line: rgba(184, 134, 46, 0.22);
+  --line-dark: rgba(26, 19, 16, 0.10);
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Inter", sans-serif;
+
+  --max: 1120px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; margin: 0; padding: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* ============================================
+   Ornamental divider — the signature motif
+   ============================================ */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 28px 0 32px;
+}
+
+.ornament span {
+  width: 56px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+
+.ornament span:last-child {
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.ornament i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  transform: rotate(45deg);
+  border-radius: 1px;
+}
+
+/* ============================================
+   Nav
+   ============================================ */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(251, 249, 246, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav__inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  height: 28px;
+  width: auto;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.nav__links a { transition: color 0.2s ease; }
+
+.nav__links a:hover,
+.nav__links a:focus-visible { color: var(--red); }
+
+.nav__cta {
+  border: 1px solid var(--gold);
+  color: var(--gold) !important;
+  padding: 8px 18px;
+  border-radius: 999px;
+}
+
+.nav__cta:hover,
+.nav__cta:focus-visible {
+  background: var(--gold);
+  color: var(--paper-raise) !important;
+}
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav__toggle span {
+  display: block;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+}
+
+/* ============================================
+   Shared section scaffolding
+   ============================================ */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0;
+}
+
+.eyebrow--dark { color: var(--red); }
+
+.section__inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 96px 24px;
+}
+
+.section--paper { background: var(--paper); }
+.section--dim { background: var(--paper-dim); }
+
+.section__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 14px 0 28px;
+  color: var(--ink);
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn--primary {
+  background: var(--red);
+  color: #fff;
+}
+
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  background: var(--red-deep);
+  transform: translateY(-2px);
+}
+
+.btn--ghost {
+  border: 1px solid var(--line-dark);
+  color: var(--ink);
+}
+
+.btn--ghost:hover,
+.btn--ghost:focus-visible {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ============================================
+   Hero
+   ============================================ */
+.hero {
+  background:
+    radial-gradient(1200px 480px at 50% -10%, rgba(184, 134, 46, 0.08), transparent 60%),
+    var(--paper);
+  padding-top: 72px;
+}
+
+.hero__inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 88px 24px 96px;
+  text-align: center;
+}
+
+.hero__logo {
+  height: 52px;
+  width: auto;
+  margin: 0 auto 36px;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(38px, 6vw, 60px);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin: 18px 0 0;
+  color: var(--ink);
+}
+
+.hero__sub {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--slate);
+  max-width: 52ch;
+  margin: 0 auto 40px;
+}
+
+.hero__cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ============================================
+   Tentang Kami
+   ============================================ */
+.about {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.about__text p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--slate);
+}
+
+.about__facts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 8px;
+}
+
+.fact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+
+.fact__label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate-light);
+}
+
+.fact__value {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* ============================================
+   Produk
+   ============================================ */
+.brands {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 12px;
+}
+
+.brand-card {
+  padding: 44px 36px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper-raise);
+  border: 1px solid var(--line);
+}
+
+.brand-card--aruna { border-top: 3px solid var(--red); }
+.brand-card--unisolve { border-top: 3px solid var(--gold); }
+
+.brand-card__logo {
+  height: 38px;
+  width: auto;
+  margin-bottom: 30px;
+}
+
+.brand-card__logo--boxed { height: 52px; }
+
+.brand-card__title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+
+.brand-card__desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--slate);
+  margin: 0 0 28px;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.chip {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 999px;
+}
+
+.brand-card--aruna .chip {
+  background: rgba(185, 28, 28, 0.07);
+  color: var(--red);
+}
+
+.brand-card--unisolve .chip {
+  background: rgba(184, 134, 46, 0.10);
+  color: var(--gold);
+}
+
+/* ============================================
+   Kontak
+   ============================================ */
+.kontak__links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.kontak__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 30px;
+  background: var(--paper-raise);
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.kontak__item:hover,
+.kontak__item:focus-visible {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.kontak__label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate-light);
+}
+
+.kontak__value {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--ink);
+  word-break: break-word;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer {
+  background: var(--ink);
+  color: var(--slate-light);
+  padding: 44px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.footer__logo {
+  height: 24px;
+  width: auto;
+  opacity: 0.9;
+  filter: brightness(0) invert(1);
+}
+
+.footer p {
+  font-size: 12px;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 860px) {
+  .about,
+  .brands {
+    grid-template-columns: 1fr;
+  }
+
+  .kontak__links {
+    grid-template-columns: 1fr;
+  }
+
+  .nav__toggle { display: flex; }
+
+  .nav__links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--paper-raise);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 8px 24px 20px;
+    border-bottom: 1px solid var(--line);
+    display: none;
+  }
+
+  .nav__links.is-open { display: flex; }
+
+  .nav__links a {
+    width: 100%;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav__cta { border: none; padding: 14px 0; }
+}
+
+@media (max-width: 520px) {
+  .section__inner { padding: 72px 20px; }
+  .hero__inner { padding: 64px 20px 56px; }
+}
