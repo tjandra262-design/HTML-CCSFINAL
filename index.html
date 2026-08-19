@@ -2,1259 +2,1247 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <title>PT Surya Satu Bersama | Lighting, Cloud & Smart Infrastructure</title>
+  <meta name="description" content="PT Surya Satu Bersama menghadirkan solusi lighting, energy, cloud, cybersecurity, IT infrastructure, IoT, Smart City, dan smart infrastructure melalui Aruna dan Unisolve.">
+  <meta name="theme-color" content="#0f1115">
 
-  <title>
-    PT Surya Satu Bersama | Lighting, Energy & Technology Solutions
-  </title>
+  <link rel="icon" type="image/png" href="favicon.png">
 
-  <meta
-    name="description"
-    content="PT Surya Satu Bersama menghadirkan solusi lighting, energy, IT, IoT, smart city, dan digital infrastructure melalui Aruna dan Unisolve."
-  >
-
-  <meta
-    name="theme-color"
-    content="#17130f"
-  >
-
-  <meta
-    property="og:title"
-    content="PT Surya Satu Bersama | Lighting, Energy & Technology"
-  >
-
-  <meta
-    property="og:description"
-    content="Lighting, Energy & Technology Solutions for modern infrastructure."
-  >
-
-  <link
-    rel="icon"
-    type="image/png"
-    href="favicon.png"
-  >
-
-  <!-- Elegant typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <style>
+    :root{
+      --bg:#ffffff;
+      --bg-alt:#f7f7f7;
+      --ink:#101216;
+      --ink-2:#171a20;
+      --text:#2b2f36;
+      --muted:#6e737b;
+      --line:#e5e7eb;
 
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
+      --ssb-gold:#b28a4a;
+      --aruna-red:#a31717;
+      --aruna-red-dark:#7f1111;
+      --unisolve-blue:#0b57d0;
+      --unisolve-blue-dark:#083a8c;
+
+      --white:#ffffff;
+      --serif:"Cormorant Garamond", Georgia, serif;
+      --sans:"Inter", Arial, sans-serif;
+      --max:1180px;
+      --shadow:0 18px 50px rgba(10,12,16,.08);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:76px}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:var(--sans);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    img{display:block;max-width:100%;height:auto}
+    a{text-decoration:none;color:inherit}
+    button{font:inherit}
+    .container{width:min(var(--max),calc(100% - 48px));margin:auto}
+
+    .eyebrow{
+      margin:0 0 16px;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:var(--ssb-gold);
+    }
+
+    .eyebrow.red{color:var(--aruna-red)}
+    .eyebrow.blue{color:var(--unisolve-blue)}
+
+    h1,h2,h3{
+      margin:0;
+      font-family:var(--serif);
+      font-weight:600;
+      letter-spacing:-.025em;
+    }
+
+    h2{
+      font-size:clamp(42px,5.5vw,70px);
+      line-height:.98;
+      color:var(--ink);
+    }
+
+    p{line-height:1.8}
+
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav-wrap{
+      width:min(var(--max),calc(100% - 48px));
+      min-height:72px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      flex-shrink:0;
+    }
+
+    .brand img{
+      width:auto;
+      height:36px;
+      max-width:180px;
+      object-fit:contain;
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      gap:26px;
+      font-size:12px;
+      font-weight:600;
+    }
+
+    .nav a{transition:.2s ease}
+    .nav a:hover{color:var(--aruna-red)}
+
+    .nav-cta{
+      padding:10px 17px;
+      border:1px solid var(--ssb-gold);
+      border-radius:999px;
+      color:var(--ssb-gold);
+    }
+
+    .nav-cta:hover{
+      background:var(--ssb-gold);
+      color:white!important;
+    }
+
+    .menu-button{
+      display:none;
+      width:40px;
+      height:40px;
+      padding:7px;
+      border:0;
+      background:transparent;
+      cursor:pointer;
+    }
+
+    .menu-button span{
+      display:block;
+      height:1.5px;
+      background:var(--ink);
+      margin:6px 0;
+    }
+
+    .hero{
+      min-height:calc(100svh - 72px);
+      display:flex;
+      align-items:flex-start;
+      background:
+        linear-gradient(180deg,#fff 0%,#fff 70%,#f7f7f7 100%);
+    }
+
+    .hero-inner{
+      width:min(900px,calc(100% - 48px));
+      margin:auto;
+      text-align:center;
+      padding:40px 0 74px;
+    }
+
+    .hero-company-name{
+      margin:0 auto 15px;
+      font-size:clamp(18px,2.3vw,27px);
+      font-weight:600;
+      letter-spacing:.075em;
+      text-transform:uppercase;
+      color:var(--ink);
+    }
+
+    .hero h1{
+      font-size:clamp(56px,8.5vw,100px);
+      line-height:.9;
+      color:var(--ink);
+    }
+
+    .hero h1 em{
+      font-style:italic;
+      font-weight:500;
+      color:var(--ssb-gold);
+    }
+
+    .hero-copy{
+      max-width:760px;
+      margin:30px auto 34px;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .hero-actions{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:0 24px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.03em;
+      transition:.2s ease;
+    }
+
+    .btn-primary{
+      background:var(--ink);
+      color:white;
+      border:1px solid var(--ink);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      background:#000;
+    }
+
+    .btn-outline{
+      border:1px solid #cfd3d8;
+      color:var(--ink);
+    }
+
+    .btn-outline:hover{
+      border-color:var(--ssb-gold);
+      color:var(--ssb-gold);
+      transform:translateY(-2px);
+    }
+
+    .section{padding:105px 0}
+    .section-white{background:#fff}
+    .section-gray{background:var(--bg-alt)}
+    .section-dark{background:var(--ink);color:white}
+
+    .section-heading{
+      max-width:780px;
+      margin-bottom:54px;
+    }
+
+    .section-heading p:last-child{
+      max-width:640px;
+      color:var(--muted);
+      font-size:15px;
+      margin-top:22px;
+    }
+
+    .section-dark h2{color:white}
+    .section-dark .section-heading p:last-child{color:rgba(255,255,255,.6)}
+
+    .intro-grid{
+      display:grid;
+      grid-template-columns:1fr 1.15fr;
+      gap:90px;
+    }
+
+    .intro-copy p{
+      margin:0 0 19px;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .intro-copy strong{color:var(--ink)}
+
+    .capability-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      border-top:1px solid rgba(255,255,255,.14);
+      border-left:1px solid rgba(255,255,255,.14);
+    }
+
+    .capability{
+      padding:34px 30px;
+      min-height:320px;
+      border-right:1px solid rgba(255,255,255,.14);
+      border-bottom:1px solid rgba(255,255,255,.14);
+    }
+
+    .capability .num{
+      color:var(--ssb-gold);
+      font-size:10px;
+      letter-spacing:.16em;
+    }
+
+    .capability h3{
+      font-size:34px;
+      margin:56px 0 14px;
+      color:white;
+    }
+
+    .capability p{
+      font-size:13px;
+      color:rgba(255,255,255,.6);
+    }
+
+    .brand-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .brand-card{
+      background:white;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      padding:44px;
+      min-height:590px;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .brand-card.aruna{border-top:3px solid var(--aruna-red)}
+    .brand-card.unisolve{border-top:3px solid var(--unisolve-blue)}
+
+    .brand-logo-box{
+      height:96px;
+      display:flex;
+      align-items:center;
+      margin-bottom:28px;
+    }
+
+    .brand-logo-box img{
+      width:auto;
+      height:auto;
+      object-fit:contain;
+    }
+
+    .brand-card.aruna .brand-logo-box img{
+      max-width:235px;
+      max-height:76px;
+    }
+
+    .brand-card.unisolve .brand-logo-box img{
+      max-width:245px;
+      max-height:78px;
+    }
+
+    .brand-kicker{
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.18em;
+      margin-bottom:14px;
+    }
+
+    .brand-card.aruna .brand-kicker{color:var(--aruna-red)}
+    .brand-card.unisolve .brand-kicker{color:var(--unisolve-blue)}
+
+    .brand-card h3{
+      font-size:42px;
+      line-height:1;
+      margin-bottom:18px;
+      color:var(--ink);
+    }
+
+    .brand-card p{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:auto;
+      padding-top:18px;
+    }
+
+    .chips span{
+      padding:8px 11px;
+      border-radius:999px;
+      font-size:10px;
+      font-weight:600;
+      background:#f1f3f5;
+    }
+
+    .brand-card.aruna .chips span{color:var(--aruna-red)}
+    .brand-card.unisolve .chips span{color:var(--unisolve-blue)}
+
+    .unisolve-block{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:56px;
+      align-items:start;
+    }
+
+    .unisolve-intro{
+      position:sticky;
+      top:100px;
+    }
+
+    .unisolve-intro h2{
+      max-width:600px;
+    }
+
+    .unisolve-intro p{
+      color:var(--muted);
+      font-size:15px;
+      max-width:560px;
+    }
+
+    .service-stack{
+      border-top:1px solid var(--line);
+    }
+
+    .service-item{
+      padding:28px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    .service-item span{
+      display:block;
+      margin-bottom:8px;
+      color:var(--unisolve-blue);
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.14em;
+    }
+
+    .service-item h3{
+      font-size:30px;
+      margin-bottom:8px;
+      color:var(--ink);
+    }
+
+    .service-item p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .smart-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:56px;
+      align-items:center;
+    }
+
+    .smart-visual{
+      min-height:430px;
+      background:
+        linear-gradient(135deg,#0d2d64,#0b57d0);
+      padding:42px;
+      color:white;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+    }
+
+    .smart-visual .eyebrow{color:white}
+    .smart-visual h3{
+      font-size:56px;
+      line-height:.95;
+      color:white;
+      max-width:560px;
+    }
+
+    .smart-visual p{
+      color:rgba(255,255,255,.75);
+      font-size:14px;
+      max-width:540px;
+    }
+
+    .smart-list{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1px;
+      background:var(--line);
+      border:1px solid var(--line);
+    }
+
+    .smart-item{
+      background:white;
+      padding:22px;
+      min-height:150px;
+    }
+
+    .smart-item strong{
+      display:block;
+      font-family:var(--serif);
+      color:var(--ink);
+      font-size:25px;
+      margin-bottom:8px;
+    }
+
+    .smart-item span{
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.6;
+    }
+
+    .product-spotlight{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:70px;
+      align-items:center;
+    }
+
+    .product-panel{
+      padding:44px;
+      background:linear-gradient(145deg,#241313,#100b0b);
+      color:white;
+      min-height:430px;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      border-left:4px solid var(--aruna-red);
+    }
+
+    .product-panel h3{
+      font-size:60px;
+      color:white;
+    }
+
+    .product-panel p{
+      max-width:520px;
+      color:rgba(255,255,255,.64);
+      font-size:14px;
+    }
+
+    .spec-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1px;
+      background:var(--line);
+      border:1px solid var(--line);
+    }
+
+    .spec{
+      background:#fff;
+      padding:22px;
+    }
+
+    .spec strong{
+      display:block;
+      font-family:var(--serif);
+      font-size:30px;
+      color:var(--ink);
+      margin-bottom:4px;
+    }
+
+    .spec span{
+      font-size:10px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+
+    .commit-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1px;
+      background:var(--line);
+      border:1px solid var(--line);
+    }
+
+    .commit-card{
+      background:white;
+      padding:28px;
+      min-height:210px;
+    }
+
+    .commit-card span{
+      color:var(--ssb-gold);
+      font-size:10px;
+      letter-spacing:.16em;
+    }
+
+    .commit-card h3{
+      font-size:28px;
+      margin:42px 0 10px;
+      color:var(--ink);
+    }
+
+    .commit-card p{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .experience-card{
+      border-top:1px solid var(--line);
+      display:grid;
+      grid-template-columns:.8fr 1.2fr;
+      gap:60px;
+      padding-top:42px;
+    }
+
+    .experience-meta .year{
+      font-family:var(--serif);
+      font-size:66px;
+      color:var(--ssb-gold);
+      line-height:1;
+    }
+
+    .experience-meta p{
+      color:var(--muted);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    .experience-copy h3{
+      font-size:46px;
+      margin-bottom:14px;
+      color:var(--ink);
+    }
+
+    .experience-copy p{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .vision-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .vision-box{
+      padding:42px;
+      background:white;
+      border:1px solid var(--line);
+    }
+
+    .vision-box h3{
+      font-size:34px;
+      margin-bottom:14px;
+      color:var(--ink);
+    }
+
+    .vision-box p{
+      color:var(--muted);
+      font-size:14px;
+      margin:0;
+    }
+
+    .contact{text-align:center}
+
+    .contact h2{
+      color:white;
+      max-width:820px;
+      margin:0 auto;
+    }
+
+    .contact>p{
+      max-width:640px;
+      margin:22px auto 38px;
+      color:rgba(255,255,255,.6);
+      font-size:14px;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      max-width:760px;
+      margin:auto;
+    }
+
+    .contact-item{
+      border:1px solid rgba(255,255,255,.16);
+      padding:24px;
+      text-align:left;
+    }
+
+    .contact-item small{
+      display:block;
+      color:var(--ssb-gold);
+      font-size:9px;
+      letter-spacing:.18em;
+      margin-bottom:8px;
+    }
+
+    .contact-item strong{
+      color:white;
+      font-size:14px;
+      font-weight:500;
+      word-break:break-word;
+    }
+
+    .footer{
+      background:#0b0d10;
+      color:#8d939c;
+      padding:34px 24px;
+      text-align:center;
+    }
+
+    .footer-logo-wrap{
+      background:white;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:8px 14px;
+      border-radius:4px;
+      margin-bottom:14px;
+    }
+
+    .footer-logo-wrap img{
+      width:auto;
+      height:28px;
+      max-width:170px;
+      object-fit:contain;
+    }
+
+    .footer p{
+      margin:0;
+      font-size:10px;
+    }
+
+    @media(max-width:900px){
+      .nav{display:none}
+      .menu-button{display:block}
+      .nav.open{
+        display:flex;
+        position:absolute;
+        top:72px;
+        left:18px;
+        right:18px;
+        padding:12px 18px;
+        background:#fff;
+        border:1px solid var(--line);
+        box-shadow:0 18px 40px rgba(0,0,0,.08);
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+      }
+      .nav.open a{padding:13px 0;border-bottom:1px solid var(--line)}
+      .intro-grid,
+      .product-spotlight,
+      .experience-card,
+      .unisolve-block,
+      .smart-grid{grid-template-columns:1fr;gap:35px}
+      .unisolve-intro{position:static}
+      .capability-grid{grid-template-columns:1fr}
+      .brand-grid{grid-template-columns:1fr}
+      .commit-grid{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:600px){
+      .container,.nav-wrap{width:min(var(--max),calc(100% - 36px))}
+      .brand img{height:32px;max-width:155px}
+      .hero-inner{width:min(100% - 36px,900px);padding:28px 0 56px}
+      .hero-company-name{font-size:17px;letter-spacing:.055em;margin-bottom:13px}
+      .hero h1{font-size:clamp(50px,15vw,72px)}
+      .hero-copy{font-size:14px}
+      .section{padding:78px 0}
+      .brand-card{padding:34px 26px;min-height:520px}
+      .brand-logo-box{height:88px}
+      .brand-card.aruna .brand-logo-box img{max-width:210px;max-height:68px}
+      .brand-card.unisolve .brand-logo-box img{max-width:220px;max-height:70px}
+      .brand-card h3{font-size:38px}
+      .smart-list,.spec-grid,.commit-grid,.vision-grid,.contact-grid{grid-template-columns:1fr}
+      .smart-visual{min-height:360px;padding:30px}
+      .smart-visual h3{font-size:46px}
+      .product-panel{padding:30px;min-height:380px}
+      .product-panel h3{font-size:48px}
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- =========================================
-       NAVIGATION
-       ========================================= -->
+<header class="site-header" id="home">
+  <div class="nav-wrap">
+    <a class="brand" href="#home" aria-label="PT Surya Satu Bersama">
+      <img src="logo-ssb.png" alt="PT Surya Satu Bersama">
+    </a>
 
-  <header class="nav" id="top">
+    <button class="menu-button" id="menuButton" type="button" aria-label="Buka menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-    <div class="nav__inner">
+    <nav class="nav" id="nav">
+      <a href="#tentang">Tentang</a>
+      <a href="#brand">Brand</a>
+      <a href="#aruna">Aruna</a>
+      <a href="#unisolve">Unisolve</a>
+      <a href="#experience">Experience</a>
+      <a class="nav-cta" href="#kontak">Hubungi Kami</a>
+    </nav>
+  </div>
+</header>
 
-      <a
-        href="#home"
-        class="nav__brand"
-        aria-label="PT Surya Satu Bersama"
-      >
-        <img
-          src="logo-ssb.png"
-          alt="PT Surya Satu Bersama"
-          class="nav__logo"
-        >
+<main>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-company-name">PT Surya Satu Bersama</div>
+    <p class="eyebrow">LIGHTING · CLOUD · SMART INFRASTRUCTURE</p>
+
+    <h1>
+      Infrastruktur yang<br>
+      <em>menerangi dan menghubungkan.</em>
+    </h1>
+
+    <p class="hero-copy">
+      PT Surya Satu Bersama menghadirkan solusi lighting, energy, cloud,
+      cybersecurity, IT infrastructure, IoT, dan smart infrastructure
+      untuk membantu organisasi membangun sistem yang lebih efisien,
+      aman, terhubung, dan siap berkembang.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#brand">Jelajahi Solusi</a>
+      <a class="btn btn-outline" href="#kontak">Diskusikan Proyek</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" id="tentang">
+  <div class="container intro-grid">
+    <div>
+      <p class="eyebrow red">Tentang SSB</p>
+      <h2>Membangun solusi dari Indonesia untuk kebutuhan infrastruktur Indonesia.</h2>
+    </div>
+
+    <div class="intro-copy">
+      <p>
+        Berdiri sejak 2023, PT Surya Satu Bersama bergerak dalam bidang
+        mekanikal-elektrikal, penerangan, dan pengembangan solusi infrastruktur.
+      </p>
+
+      <p>
+        Melalui <strong>Aruna</strong>, kami menghadirkan solusi penerangan jalan,
+        outdoor, indoor, solar, dan smart lighting dengan perhatian pada efisiensi,
+        keandalan, kualitas komponen, dan kebutuhan nyata di lapangan.
+      </p>
+
+      <p>
+        Melalui <strong>Unisolve</strong>, kami mengembangkan layanan cloud,
+        cybersecurity, IT infrastructure, IoT, Smart City, smart building,
+        system integration, dan managed services untuk menjawab kebutuhan
+        transformasi digital dan connected infrastructure.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Our Capabilities</p>
+      <h2>Dari cahaya hingga konektivitas.</h2>
+      <p>
+        SSB menggabungkan infrastruktur fisik dan digital dalam dua lini solusi
+        yang saling melengkapi.
+      </p>
+    </div>
+
+    <div class="capability-grid">
+      <article class="capability">
+        <div class="num">01</div>
+        <h3>Lighting & Energy</h3>
+        <p>PJU, outdoor, indoor, solar lighting, smart lighting, dan custom lighting.</p>
+      </article>
+
+      <article class="capability">
+        <div class="num">02</div>
+        <h3>Cloud & Security</h3>
+        <p>Cloud consulting, implementation, migration, managed services, dan cybersecurity.</p>
+      </article>
+
+      <article class="capability">
+        <div class="num">03</div>
+        <h3>Smart Infrastructure</h3>
+        <p>IoT, smart building, smart home, smart office, hotel automation, dan Smart City.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-gray" id="brand">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Our Brands</p>
+      <h2>Dua keahlian. Satu visi.</h2>
+      <p>
+        Aruna dan Unisolve dikembangkan sebagai dua lini solusi dengan fokus yang jelas
+        namun dapat bekerja dalam satu ekosistem.
+      </p>
+    </div>
+
+    <div class="brand-grid">
+
+      <article class="brand-card aruna" id="aruna">
+        <div class="brand-logo-box">
+          <img src="logo-aruna.png" alt="Aruna">
+        </div>
+
+        <div class="brand-kicker">LIGHTING & ENERGY</div>
+
+        <h3>Cahaya yang bekerja lebih dari sekadar menerangi.</h3>
+
+        <p>
+          Aruna menghadirkan solusi penerangan untuk jalan, kawasan, bangunan,
+          ruang komersial, dan infrastruktur. Fokus kami adalah menghadirkan
+          pencahayaan yang efisien, andal, fungsional, dan relevan terhadap kebutuhan proyek.
+        </p>
+
+        <div class="chips">
+          <span>Street Lighting</span>
+          <span>Indoor Lighting</span>
+          <span>Outdoor Lighting</span>
+          <span>Solar Lighting</span>
+          <span>Smart Lighting</span>
+          <span>Custom Lighting</span>
+        </div>
+      </article>
+
+      <article class="brand-card unisolve" id="unisolve">
+        <div class="brand-logo-box">
+          <img src="logo-unisolve.png" alt="Unisolve">
+        </div>
+
+        <div class="brand-kicker">CLOUD · CYBERSECURITY · SMART INFRASTRUCTURE</div>
+
+        <h3>Secure. Connected. Intelligent.</h3>
+
+        <p>
+          Unisolve membantu organisasi merancang, membangun, mengamankan,
+          memigrasikan, dan mengelola infrastruktur digital — dari cloud dan
+          cybersecurity hingga IoT, smart building, dan connected environments.
+        </p>
+
+        <div class="chips">
+          <span>Cloud Consulting</span>
+          <span>Cloud Implementation</span>
+          <span>Managed Cloud</span>
+          <span>Cybersecurity</span>
+          <span>IT Infrastructure</span>
+          <span>IoT</span>
+          <span>Smart Building</span>
+          <span>Smart City</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="container unisolve-block">
+
+    <div class="unisolve-intro">
+      <p class="eyebrow blue">Unisolve Services</p>
+      <h2>Cloud, Infrastructure & Cybersecurity.</h2>
+      <p>
+        Unisolve membantu organisasi membangun fondasi digital yang aman,
+        scalable, dan dapat dikelola secara berkelanjutan.
+      </p>
+    </div>
+
+    <div class="service-stack">
+      <article class="service-item">
+        <span>01 · CLOUD CONSULTING</span>
+        <h3>Strategy before infrastructure.</h3>
+        <p>
+          Cloud strategy, architecture assessment, migration planning,
+          modernization, governance, cost optimization, dan roadmap implementasi.
+        </p>
+      </article>
+
+      <article class="service-item">
+        <span>02 · CLOUD IMPLEMENTATION</span>
+        <h3>From design to deployment.</h3>
+        <p>
+          Cloud deployment, migration, networking, infrastructure modernization,
+          backup, disaster recovery, dan system integration.
+        </p>
+      </article>
+
+      <article class="service-item">
+        <span>03 · MANAGED CLOUD SERVICES</span>
+        <h3>Reliable operations, continuously.</h3>
+        <p>
+          Monitoring, operational support, maintenance, performance optimization,
+          cost optimization, backup management, dan ongoing cloud operations.
+        </p>
+      </article>
+
+      <article class="service-item">
+        <span>04 · CYBERSECURITY</span>
+        <h3>Security built into the infrastructure.</h3>
+        <p>
+          Security assessment, cloud security, infrastructure security,
+          identity & access management, security hardening, monitoring,
+          governance, dan security operations.
+        </p>
+      </article>
+
+      <article class="service-item">
+        <span>05 · IT INFRASTRUCTURE & INTEGRATION</span>
+        <h3>The foundation behind digital operations.</h3>
+        <p>
+          Compute, storage, networking, system integration, IT distribution,
+          dan supporting infrastructure untuk kebutuhan enterprise.
+        </p>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-gray">
+  <div class="container smart-grid">
+
+    <div class="smart-visual">
+      <p class="eyebrow">SMART INFRASTRUCTURE & IoT</p>
+      <h3>Connecting spaces, devices, and data.</h3>
+      <p>
+        Unisolve mengembangkan solusi smart infrastructure untuk hunian,
+        gedung, hotel, kantor, kawasan, dan lingkungan perkotaan yang membutuhkan
+        automation, monitoring, control, dan connected devices.
+      </p>
+    </div>
+
+    <div class="smart-list">
+      <div class="smart-item">
+        <strong>Smart Building</strong>
+        <span>Automation, environmental monitoring, access, lighting control, dan energy monitoring.</span>
+      </div>
+
+      <div class="smart-item">
+        <strong>Smart Home</strong>
+        <span>Connected devices, sensors, smart switches, control panels, dan automation.</span>
+      </div>
+
+      <div class="smart-item">
+        <strong>Smart Office</strong>
+        <span>Workspace automation, energy efficiency, monitoring, dan connected environments.</span>
+      </div>
+
+      <div class="smart-item">
+        <strong>Hotel Automation</strong>
+        <span>Room control, lighting, sensors, automation, dan centralized management.</span>
+      </div>
+
+      <div class="smart-item">
+        <strong>IoT Platform</strong>
+        <span>Device connectivity, monitoring, dashboards, alerts, and data-driven operations.</span>
+      </div>
+
+      <div class="smart-item">
+        <strong>Smart City</strong>
+        <span>Connected urban infrastructure integrating devices, networks, data, and control systems.</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-white" id="ecomax">
+  <div class="container product-spotlight">
+
+    <div class="product-panel">
+      <p class="eyebrow red">ARUNA STREET LIGHTING</p>
+      <h3>ECOMAX 2</h3>
+      <p>
+        Dirancang untuk kebutuhan penerangan jalan dan infrastruktur urban,
+        ECOMAX 2 menggabungkan desain modular, distribusi cahaya yang luas,
+        efisiensi tinggi, serta sistem thermal management untuk membantu
+        mempertahankan performa LED dan umur pakai.
+      </p>
+    </div>
+
+    <div>
+      <p class="eyebrow red">Technical Highlights</p>
+      <h2>Performa yang dirancang untuk aplikasi jalan.</h2>
+
+      <div class="spec-grid">
+        <div class="spec"><strong>≥150 lm/W</strong><span>Efficiency</span></div>
+        <div class="spec"><strong>40–120 W</strong><span>Power Range</span></div>
+        <div class="spec"><strong>IP65</strong><span>Outdoor Protection</span></div>
+        <div class="spec"><strong>≥50,000 h</strong><span>L80 Lifetime</span></div>
+        <div class="spec"><strong>CRI ≥80</strong><span>Typical CRI</span></div>
+        <div class="spec"><strong>Type III</strong><span>Light Distribution</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Our Commitment</p>
+      <h2>Built with purpose. Designed for reliability.</h2>
+    </div>
+
+    <div class="commit-grid">
+      <article class="commit-card">
+        <span>01</span>
+        <h3>Indonesian Brand</h3>
+        <p>Aruna dikembangkan sebagai merek Indonesia dengan semangat membangun kemampuan industri dalam negeri.</p>
+      </article>
+
+      <article class="commit-card">
+        <span>02</span>
+        <h3>Quality Components</h3>
+        <p>Pemilihan komponen dan material mempertimbangkan performa, efisiensi, dan daya tahan.</p>
+      </article>
+
+      <article class="commit-card">
+        <span>03</span>
+        <h3>5-Year Warranty</h3>
+        <p>Dukungan garansi hingga 5 tahun untuk memberikan kepastian penggunaan jangka panjang.</p>
+      </article>
+
+      <article class="commit-card">
+        <span>04</span>
+        <h3>After-Sales Support</h3>
+        <p>Layanan purna jual dan ketersediaan sparepart menjadi bagian dari komitmen terhadap keberlanjutan instalasi.</p>
+      </article>
+
+      <article class="commit-card">
+        <span>05</span>
+        <h3>Standards & Performance</h3>
+        <p>Produk dikembangkan dengan memperhatikan standar nasional dan internasional yang relevan.</p>
+      </article>
+
+      <article class="commit-card">
+        <span>06</span>
+        <h3>Local Empowerment</h3>
+        <p>Kami mendorong penggunaan tenaga kerja terlatih dan keterlibatan kemampuan lokal.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" id="experience">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Selected Experience</p>
+      <h2>Pengalaman nyata. Solusi yang terimplementasi.</h2>
+    </div>
+
+    <div class="experience-card">
+      <div class="experience-meta">
+        <div class="year">2025</div>
+        <p>Architectural Lighting & Electrical Works</p>
+      </div>
+
+      <div class="experience-copy">
+        <h3>Royal Mediterania Central Park</h3>
+        <p>
+          Revitalisasi sistem pencahayaan LED pada area bangunan, mencakup
+          pelepasan instalasi LED strip dan jalur kabel eksisting,
+          penguatan struktur, instalasi jalur kabel utama, serta pemasangan
+          dan konfigurasi panel box dan LED strip.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Vision & Mission</p>
+      <h2>Tumbuh bersama kebutuhan infrastruktur Indonesia.</h2>
+    </div>
+
+    <div class="vision-grid">
+      <div class="vision-box">
+        <h3>Vision</h3>
+        <p>
+          Menjadi perusahaan nasional yang menghadirkan solusi penerangan,
+          elektrikal, cloud, cybersecurity, dan smart infrastructure berkualitas
+          melalui pengembangan kemampuan dalam negeri.
+        </p>
+      </div>
+
+      <div class="vision-box">
+        <h3>Mission</h3>
+        <p>
+          Mengembangkan solusi yang inovatif, efisien, aman, dan relevan;
+          membangun kemitraan jangka panjang; memperkuat kemampuan industri lokal;
+          serta memberikan layanan dan dukungan yang dapat diandalkan.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark contact" id="kontak">
+  <div class="container">
+    <p class="eyebrow">LET'S CONNECT</p>
+    <h2>Mari mulai dari kebutuhan Anda.</h2>
+    <p>
+      Ceritakan proyek, kebutuhan, atau tantangan yang sedang Anda hadapi.
+      Kami akan membantu menerjemahkannya menjadi pendekatan solusi yang relevan.
+    </p>
+
+    <div class="contact-grid">
+      <a class="contact-item" href="mailto:ctj@suryasatubersama.com">
+        <small>EMAIL</small>
+        <strong>ctj@suryasatubersama.com</strong>
       </a>
 
-      <nav
-        class="nav__links"
-        id="navLinks"
-        aria-label="Navigasi utama"
-      >
-
-        <a href="#home">Home</a>
-
-        <a href="#about">About</a>
-
-        <a href="#solutions">Solutions</a>
-
-        <a href="#brands">Brands</a>
-
-        <a href="#projects">Projects</a>
-
-        <a
-          href="#contact"
-          class="nav__cta"
-        >
-          Contact
-        </a>
-
-      </nav>
-
-      <button
-        class="nav__toggle"
-        id="navToggle"
-        type="button"
-        aria-label="Buka menu"
-        aria-expanded="false"
-        aria-controls="navLinks"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
+      <a class="contact-item" href="https://wa.me/6281212882280" target="_blank" rel="noopener">
+        <small>WHATSAPP</small>
+        <strong>+62 812-1288-2280</strong>
+      </a>
     </div>
-
-  </header>
-
-
-  <main>
-
-    <!-- =========================================
-         HERO
-         ========================================= -->
-
-    <section
-      id="home"
-      class="hero"
-    >
-
-      <div class="hero__background"></div>
-
-      <div class="hero__overlay"></div>
-
-      <div class="hero__inner">
-
-        <div class="hero__content">
-
-          <div class="hero__brand-lockup">
-
-            <img
-              src="logo-ssb.png"
-              alt="PT Surya Satu Bersama"
-              class="hero__logo"
-            >
-
-          </div>
-
-          <p class="eyebrow">
-            LIGHTING • ENERGY • TECHNOLOGY
-          </p>
-
-          <h1 class="hero__title">
-            Menyalakan Jalan.<br>
-            <span>Menyambungkan Kota.</span>
-          </h1>
-
-          <div
-            class="ornament"
-            aria-hidden="true"
-          >
-            <span></span>
-            <i></i>
-            <span></span>
-          </div>
-
-          <p class="hero__sub">
-            PT Surya Satu Bersama menghadirkan solusi penerangan,
-            energi, dan teknologi untuk membantu membangun
-            infrastruktur yang lebih terang, efisien, terhubung,
-            dan siap berkembang.
-          </p>
-
-          <div class="hero__cta">
-
-            <a
-              href="#solutions"
-              class="btn btn--primary"
-            >
-              Explore Solutions
-              <span>→</span>
-            </a>
-
-            <a
-              href="#contact"
-              class="btn btn--light"
-            >
-              Contact Us
-            </a>
-
-          </div>
-
-        </div>
-
-        <div class="hero__scroll">
-          <span></span>
-          Scroll to explore
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
-         INTRO
-         ========================================= -->
-
-    <section
-      class="section section--paper"
-    >
-
-      <div class="section__inner intro">
-
-        <div class="intro__label">
-
-          <p class="eyebrow eyebrow--dark">
-            PT SURYA SATU BERSAMA
-          </p>
-
-        </div>
-
-        <div class="intro__content">
-
-          <h2 class="section__title section__title--large">
-            Infrastruktur yang lebih baik
-            dimulai dari solusi yang tepat.
-          </h2>
-
-          <p>
-            Kami percaya bahwa infrastruktur bukan hanya tentang
-            membangun sesuatu yang terlihat hari ini, tetapi tentang
-            menciptakan lingkungan yang dapat bekerja lebih baik
-            untuk masyarakat, bisnis, dan generasi berikutnya.
-          </p>
-
-          <p>
-            Melalui <strong>Aruna</strong> dan
-            <strong>Unisolve</strong>, SSB mengintegrasikan
-            penerangan, energi, teknologi informasi, IoT,
-            dan solusi digital untuk menjawab kebutuhan
-            infrastruktur modern.
-          </p>
-
-          <a
-            href="#about"
-            class="text-link"
-          >
-            Discover SSB
-            <span>→</span>
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
-         CAPABILITIES
-         ========================================= -->
-
-    <section
-      id="solutions"
-      class="section section--dark"
-    >
-
-      <div class="section__inner">
-
-        <div class="section__heading section__heading--light">
-
-          <div>
-
-            <p class="eyebrow">
-              OUR CAPABILITIES
-            </p>
-
-            <h2 class="section__title section__title--light">
-              Dari cahaya hingga
-              konektivitas.
-            </h2>
-
-          </div>
-
-          <p class="section__lead">
-            Kami menggabungkan keahlian di bidang penerangan
-            dan teknologi untuk menghadirkan solusi yang
-            tidak hanya berfungsi, tetapi memberikan nilai
-            jangka panjang.
-          </p>
-
-        </div>
-
-
-        <div class="capabilities">
-
-          <article class="capability">
-
-            <span class="capability__number">
-              01
-            </span>
-
-            <div class="capability__line"></div>
-
-            <h3>
-              Lighting
-            </h3>
-
-            <p>
-              Solusi penerangan indoor, outdoor, dan
-              penerangan jalan yang dirancang berdasarkan
-              kebutuhan lingkungan dan karakter setiap proyek.
-            </p>
-
-            <a
-              href="#aruna"
-              class="capability__link"
-            >
-              Explore Lighting →
-            </a>
-
-          </article>
-
-
-          <article class="capability">
-
-            <span class="capability__number">
-              02
-            </span>
-
-            <div class="capability__line"></div>
-
-            <h3>
-              Energy
-            </h3>
-
-            <p>
-              Solusi penerangan berbasis energi, termasuk
-              solar lighting dan pendekatan efisiensi energi
-              untuk infrastruktur yang lebih berkelanjutan.
-            </p>
-
-            <a
-              href="#aruna"
-              class="capability__link"
-            >
-              Explore Energy →
-            </a>
-
-          </article>
-
-
-          <article class="capability">
-
-            <span class="capability__number">
-              03
-            </span>
-
-            <div class="capability__line"></div>
-
-            <h3>
-              Technology
-            </h3>
-
-            <p>
-              IT, IoT, software, smart city, dan digital
-              infrastructure yang membantu organisasi bekerja
-              lebih terhubung, efisien, dan responsif.
-            </p>
-
-            <a
-              href="#unisolve"
-              class="capability__link"
-            >
-              Explore Technology →
-            </a>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
-         BRANDS
-         ========================================= -->
-
-    <section
-      id="brands"
-      class="section section--dim"
-    >
-
-      <div class="section__inner">
-
-        <div class="section__heading">
-
-          <div>
-
-            <p class="eyebrow eyebrow--dark">
-              OUR BRANDS
-            </p>
-
-            <h2 class="section__title">
-              Dua keahlian.<br>
-              Satu visi.
-            </h2>
-
-          </div>
-
-          <p class="section__lead">
-            Dua lini solusi yang saling melengkapi untuk
-            menjawab kebutuhan infrastruktur modern.
-          </p>
-
-        </div>
-
-
-        <div class="brands">
-
-
-          <!-- ARUNA -->
-
-          <article
-            id="aruna"
-            class="brand-card brand-card--aruna"
-          >
-
-            <div class="brand-card__top">
-
-              <span class="brand-card__index">
-                01 / LIGHTING & ENERGY
-              </span>
-
-              <div class="brand-logo-wrap brand-logo-wrap--aruna">
-
-                <img
-                  src="logo-aruna.png"
-                  alt="Aruna"
-                  class="brand-card__logo brand-card__logo--aruna"
-                >
-
-              </div>
-
-            </div>
-
-
-            <div class="brand-card__body">
-
-              <h3 class="brand-card__title">
-                Cahaya yang bekerja
-                lebih dari sekadar menerangi.
-              </h3>
-
-              <p class="brand-card__desc">
-                Aruna menghadirkan solusi penerangan untuk
-                ruang, kawasan, jalan, dan infrastruktur.
-                Kami memandang penerangan sebagai bagian dari
-                sistem yang lebih besar—membantu menciptakan
-                lingkungan yang lebih aman, nyaman, dan efisien.
-              </p>
-
-
-              <div class="brand-solutions">
-
-                <span>Indoor Lighting</span>
-                <span>Outdoor Lighting</span>
-                <span>Street Lighting</span>
-                <span>Solar Lighting</span>
-                <span>Smart Lighting</span>
-
-              </div>
-
-
-              <a
-                href="#contact"
-                class="brand-card__link brand-card__link--aruna"
-              >
-                Explore Aruna
-                <span>→</span>
-              </a>
-
-            </div>
-
-          </article>
-
-
-          <!-- UNISOLVE -->
-
-          <article
-            id="unisolve"
-            class="brand-card brand-card--unisolve"
-          >
-
-            <div class="brand-card__top">
-
-              <span class="brand-card__index">
-                02 / TECHNOLOGY
-              </span>
-
-              <div class="brand-logo-wrap brand-logo-wrap--unisolve">
-
-                <img
-                  src="logo-unisolve.png"
-                  alt="Unisolve"
-                  class="brand-card__logo brand-card__logo--unisolve"
-                >
-
-              </div>
-
-            </div>
-
-
-            <div class="brand-card__body">
-
-              <h3 class="brand-card__title">
-                Teknologi yang menyelesaikan
-                masalah nyata.
-              </h3>
-
-              <p class="brand-card__desc">
-                Unisolve menghadirkan solusi teknologi untuk
-                membantu organisasi membangun sistem yang
-                lebih terhubung dan efisien—mulai dari
-                infrastruktur IT hingga IoT, software,
-                smart city, dan distribusi teknologi.
-              </p>
-
-
-              <div class="brand-solutions">
-
-                <span>IT Infrastructure</span>
-                <span>IoT Solutions</span>
-                <span>Smart City</span>
-                <span>Software</span>
-                <span>IT Distribution</span>
-
-              </div>
-
-
-              <a
-                href="#contact"
-                class="brand-card__link brand-card__link--unisolve"
-              >
-                Explore Unisolve
-                <span>→</span>
-              </a>
-
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
-         SOLUTION GRID
-         ========================================= -->
-
-    <section
-      class="section section--paper"
-    >
-
-      <div class="section__inner">
-
-        <div class="section__heading">
-
-          <div>
-
-            <p class="eyebrow eyebrow--dark">
-              SOLUTIONS
-            </p>
-
-            <h2 class="section__title">
-              Satu kebutuhan,
-              satu solusi yang tepat.
-            </h2>
-
-          </div>
-
-          <p class="section__lead">
-            Setiap proyek memiliki kondisi, tantangan,
-            dan tujuan yang berbeda. Karena itu,
-            kami tidak memulai dari produk.
-            Kami memulai dari kebutuhan.
-          </p>
-
-        </div>
-
-
-        <div class="solution-grid">
-
-          <article class="solution-item">
-            <span>01</span>
-            <h3>Street Lighting</h3>
-            <p>
-              Mendukung kebutuhan penerangan jalan,
-              kawasan, dan infrastruktur publik.
-            </p>
-          </article>
-
-          <article class="solution-item">
-            <span>02</span>
-            <h3>Solar Lighting</h3>
-            <p>
-              Penerangan berbasis energi surya untuk
-              kebutuhan yang membutuhkan fleksibilitas.
-            </p>
-          </article>
-
-          <article class="solution-item">
-            <span>03</span>
-            <h3>Industrial Lighting</h3>
-            <p>
-              Penerangan untuk lingkungan industrial
-              yang membutuhkan keandalan dan efisiensi.
-            </p>
-          </article>
-
-          <article class="solution-item">
-            <span>04</span>
-            <h3>Commercial Lighting</h3>
-            <p>
-              Menciptakan ruang yang nyaman, fungsional,
-              dan memiliki karakter.
-            </p>
-          </article>
-
-          <article class="solution-item">
-            <span>05</span>
-            <h3>IT Infrastructure</h3>
-            <p>
-              Fondasi teknologi untuk mendukung operasional
-              dan pertumbuhan organisasi.
-            </p>
-          </article>
-
-          <article class="solution-item">
-            <span>06</span>
-            <h3>IoT & Smart City</h3>
-            <p>
-              Menghubungkan perangkat, data, dan lingkungan
-              untuk sistem yang lebih terukur.
-            </p>
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
-         APPROACH
-         ========================================= -->
-
-    <section
-      class="section section--warm"
-    >
-
-      <div class="section__inner">
-
-        <div class="section__heading">
-
-          <div>
-
-            <p class="eyebrow eyebrow--dark">
-              OUR APPROACH
-            </p>
-
-            <h2 class="section__title">
-              Kami tidak hanya menjual produk.
-              Kami membantu menyelesaikan kebutuhan.
-            </h2>
-
-          </div>
-
-        </div>
-
-
-        <div class="approach">
-
-          <div class="approach__item">
-            <span>01</span>
-            <h3>Understand</h3>
-            <p>
-              Memahami kebutuhan, lingkungan,
-              tantangan, dan tujuan proyek.
-            </p>
-          </div>
-
-          <div class="approach__item">
-            <span>02</span>
-            <h3>Design</h3>
-            <p>
-              Menyusun pendekatan dan solusi
-              yang sesuai dengan kebutuhan.
-            </p>
-          </div>
-
-          <div class="approach__item">
-            <span>03</span>
-            <h3>Deliver</h3>
-            <p>
-              Menghadirkan produk, teknologi,
-              dan implementasi yang dibutuhkan.
-            </p>
-          </div>
-
-          <div class="approach__item">
-            <span>04</span>
-            <h3>Connect</h3>
-            <p>
-              Menghubungkan berbagai elemen
-              agar bekerja sebagai satu kesatuan.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
-         PROJECTS
-         ========================================= -->
-
-    <section
-      id="projects"
-      class="section section--dark"
-    >
-
-      <div class="section__inner">
-
-        <div class="section__heading section__heading--light">
-
-          <div>
-
-            <p class="eyebrow">
-              SELECTED PROJECTS
-            </p>
-
-            <h2 class="section__title section__title--light">
-              Dari konsep menjadi
-              infrastruktur nyata.
-            </h2>
-
-          </div>
-
-          <p class="section__lead">
-            Setiap proyek memiliki cerita dan tantangannya
-            sendiri. Hasil terbaik lahir dari pemahaman
-            terhadap kebutuhan di lapangan, perencanaan
-            yang tepat, dan eksekusi yang disiplin.
-          </p>
-
-        </div>
-
-
-        <div class="project-placeholder">
-
-          <div class="project-placeholder__content">
-
-            <span>
-              PROJECT PORTFOLIO
-            </span>
-
-            <h3>
-              Projects that connect
-              infrastructure with purpose.
-            </h3>
-
-            <p>
-              Portfolio proyek SSB akan ditampilkan di sini,
-              lengkap dengan lokasi, kategori solusi,
-              dan kontribusi yang diberikan.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
-         INDUSTRIES
-         ========================================= -->
-
-    <section
-      class="section section--paper"
-    >
-
-      <div class="section__inner">
-
-        <div class="section__heading">
-
-          <div>
-
-            <p class="eyebrow eyebrow--dark">
-              INDUSTRIES
-            </p>
-
-            <h2 class="section__title">
-              Solusi untuk berbagai
-              lingkungan.
-            </h2>
-
-          </div>
-
-        </div>
-
-
-        <div class="industries">
-
-          <div class="industry">
-            <span>01</span>
-            <h3>Government</h3>
-            <p>
-              Public infrastructure &amp; PJU
-            </p>
-          </div>
-
-          <div class="industry">
-            <span>02</span>
-            <h3>Industrial</h3>
-            <p>
-              Kawasan industri &amp; fasilitas
-            </p>
-          </div>
-
-          <div class="industry">
-            <span>03</span>
-            <h3>Commercial</h3>
-            <p>
-              Gedung &amp; area komersial
-            </p>
-          </div>
-
-          <div class="industry">
-            <span>04</span>
-            <h3>Property</h3>
-            <p>
-              Kawasan &amp; pengembangan properti
-            </p>
-          </div>
-
-          <div class="industry">
-            <span>05</span>
-            <h3>Smart City</h3>
-            <p>
-              Connected urban infrastructure
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
-         ABOUT
-         ========================================= -->
-
-    <section
-      id="about"
-      class="section section--dim"
-    >
-
-      <div class="section__inner about">
-
-        <div class="about__text">
-
-          <p class="eyebrow eyebrow--dark">
-            ABOUT SSB
-          </p>
-
-          <h2 class="section__title">
-            Membangun infrastruktur
-            yang memberi arti.
-          </h2>
-
-          <p>
-            PT Surya Satu Bersama hadir dengan satu tujuan:
-            membantu menghadirkan infrastruktur yang lebih
-            baik melalui perpaduan penerangan, energi,
-            dan teknologi.
-          </p>
-
-          <p>
-            Kami membangun SSB dengan keyakinan bahwa solusi
-            yang baik harus tepat secara teknis, relevan
-            secara kebutuhan, dan bernilai dalam jangka panjang.
-          </p>
-
-          <p>
-            Melalui <strong>Aruna</strong> dan
-            <strong>Unisolve</strong>, kami mengembangkan
-            ekosistem solusi yang menjembatani kebutuhan
-            fisik dan digital—dari cahaya yang menerangi
-            jalan hingga teknologi yang menghubungkan sistem.
-          </p>
-
-        </div>
-
-
-        <div class="about__facts">
-
-          <div class="fact">
-
-            <span class="fact__label">
-              Lighting
-            </span>
-
-            <span class="fact__value">
-              Indoor • Outdoor • Street
-            </span>
-
-          </div>
-
-
-          <div class="fact">
-
-            <span class="fact__label">
-              Energy
-            </span>
-
-            <span class="fact__value">
-              Solar &amp; Energy Solutions
-            </span>
-
-          </div>
-
-
-          <div class="fact">
-
-            <span class="fact__label">
-              Technology
-            </span>
-
-            <span class="fact__value">
-              IT • IoT • Smart City
-            </span>
-
-          </div>
-
-
-          <div class="fact">
-
-            <span class="fact__label">
-              Focus
-            </span>
-
-            <span class="fact__value">
-              Practical Long-Term Value
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
-         WHY SSB
-         ========================================= -->
-
-    <section
-      class="section section--paper"
-    >
-
-      <div class="section__inner">
-
-        <div class="section__heading">
-
-          <div>
-
-            <p class="eyebrow eyebrow--dark">
-              WHY SSB
-            </p>
-
-            <h2 class="section__title">
-              Dibangun untuk
-              kebutuhan nyata.
-            </h2>
-
-          </div>
-
-        </div>
-
-
-        <div class="why-grid">
-
-          <article>
-            <span>01</span>
-            <h3>Solution-Oriented</h3>
-            <p>
-              Kami memulai dari masalah dan kebutuhan,
-              bukan sekadar dari produk.
-            </p>
-          </article>
-
-          <article>
-            <span>02</span>
-            <h3>Integrated</h3>
-            <p>
-              Lighting, energy, IT, IoT, dan digital
-              solutions dapat berkembang dalam satu ekosistem.
-            </p>
-          </article>
-
-          <article>
-            <span>03</span>
-            <h3>Practical</h3>
-            <p>
-              Solusi yang baik harus dapat diterapkan
-              dan bekerja di dunia nyata.
-            </p>
-          </article>
-
-          <article>
-            <span>04</span>
-            <h3>Adaptive</h3>
-            <p>
-              Kami membangun solusi yang dapat berkembang
-              bersama kebutuhan dan teknologi.
-            </p>
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
-         BRAND STATEMENT
-         ========================================= -->
-
-    <section
-      class="statement"
-    >
-
-      <div class="statement__inner">
-
-        <p class="eyebrow">
-          ONE COMPANY • TWO CAPABILITIES
-        </p>
-
-        <h2>
-          One Connected Future.
-        </h2>
-
-        <p>
-          SSB menghubungkan penerangan, energi,
-          dan teknologi untuk membantu menciptakan
-          infrastruktur yang lebih terang,
-          lebih efisien, dan lebih terhubung.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
-         CONTACT CTA
-         ========================================= -->
-
-    <section
-      id="contact"
-      class="section section--contact"
-    >
-
-      <div class="section__inner contact">
-
-        <div class="contact__content">
-
-          <p class="eyebrow">
-            LET'S CONNECT
-          </p>
-
-          <h2>
-            Mari membangun
-            sesuatu yang lebih baik.
-          </h2>
-
-          <p>
-            Apakah Anda sedang merencanakan proyek
-            penerangan, pengembangan kawasan,
-            infrastruktur teknologi, atau solusi digital?
-          </p>
-
-          <a
-            href="mailto:ctj@suryasatubersama.com"
-            class="btn btn--gold"
-          >
-            Start a Conversation
-            <span>→</span>
-          </a>
-
-        </div>
-
-
-        <div class="contact__details">
-
-          <a
-            href="mailto:ctj@suryasatubersama.com"
-            class="contact__item"
-          >
-
-            <span>
-              EMAIL
-            </span>
-
-            <strong>
-              ctj@suryasatubersama.com
-            </strong>
-
-          </a>
-
-
-          <a
-            href="https://wa.me/6281212882280"
-            target="_blank"
-            rel="noopener"
-            class="contact__item"
-          >
-
-            <span>
-              WHATSAPP
-            </span>
-
-            <strong>
-              +62 812-1288-2280
-            </strong>
-
-          </a>
-
-
-          <div class="contact__item">
-
-            <span>
-              LOCATION
-            </span>
-
-            <strong>
-              Indonesia
-            </strong>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- =========================================
-       FOOTER
-       ========================================= -->
-
-  <footer class="footer">
-
-    <div class="footer__inner">
-
-      <div class="footer__brand">
-
-        <img
-          src="logo-ssb.png"
-          alt="PT Surya Satu Bersama"
-          class="footer__logo"
-        >
-
-        <p>
-          Lighting • Energy • Technology
-        </p>
-
-      </div>
-
-
-      <div class="footer__brands">
-
-        <div>
-
-          <img
-            src="logo-aruna.png"
-            alt="Aruna"
-            class="footer__brand-logo footer__brand-logo--aruna"
-          >
-
-          <span>
-            Lighting &amp; Energy Solutions
-          </span>
-
-        </div>
-
-
-        <div>
-
-          <img
-            src="logo-unisolve.png"
-            alt="Unisolve"
-            class="footer__brand-logo footer__brand-logo--unisolve"
-          >
-
-          <span>
-            Technology &amp; Digital Infrastructure
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <div class="footer__bottom">
-
-        <p>
-          © <span id="year"></span>
-          PT Surya Satu Bersama.
-          All rights reserved.
-        </p>
-
-        <a href="#top">
-          Back to top ↑
-        </a>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-
-  <script src="script.js"></script>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-logo-wrap">
+    <img src="logo-ssb.png" alt="PT Surya Satu Bersama">
+  </div>
+  <p>© <span id="year"></span> PT Surya Satu Bersama. All rights reserved.</p>
+</footer>
+
+<script>
+  const menuButton = document.getElementById("menuButton");
+  const nav = document.getElementById("nav");
+
+  if (menuButton && nav) {
+    menuButton.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(open));
+    });
+
+    nav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
