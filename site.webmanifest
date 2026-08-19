@@ -1,0 +1,17 @@
+{
+  "name": "PT Surya Satu Bersama",
+  "short_name": "SSB",
+  "description": "Lighting, cloud, cybersecurity, IoT dan smart infrastructure melalui Aruna dan Unisolve.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b1119",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
